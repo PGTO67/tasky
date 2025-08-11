@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tasky-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tasky
+  template:
+    metadata:
+      labels:
+        app: tasky
+    spec:
+      containers:
+      - name: tasky
+        image: 724772080029.dkr.ecr.us-east-1.amazonaws.com/tasky-app:PLACEHOLDER_TAG
+        ports:
+        - containerPort: 8080
