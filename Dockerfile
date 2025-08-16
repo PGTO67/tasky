@@ -13,8 +13,8 @@ WORKDIR /app
 COPY --from=build /go/src/tasky/tasky .
 COPY --from=build /go/src/tasky/assets ./assets
 
-# Copy wizexercise.txt from your local context into the final image
-COPY wizexercise.txt /app/wizexercise.txt
+# Copy textexercise.txt from your local context into the final image
+COPY testexercise.txt /app/wizexercise.txt
 
 EXPOSE 8080
 ENTRYPOINT ["/app/tasky"]
